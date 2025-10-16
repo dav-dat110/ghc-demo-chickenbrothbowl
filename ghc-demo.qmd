@@ -1,0 +1,87 @@
+---
+title: GHC Demo Assignment
+subtitle: CSC 110- Fall 2025
+author: Will Schuckenbrock
+date: 10-11-25
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: body
+    theme: cerulean
+  pdf:
+    toc: true 
+    toc-depth: 1 
+    fig-width: 8 
+    fig-height: 5 
+    geometry:
+      - top=20mm
+      - left=20mm
+      - right=20mm
+      - heightrounded
+---
+
+```{r setup}
+#| label: load-packages
+#| output: false
+#| include: false
+library(tidyverse)
+```
+
+## Homework
+
+```{r}
+#| fig-cap: 
+#|   - "Fuel mileage scatterplot"
+ggplot(
+  mpg, aes(displ, hwy)) +
+  geom_point() +
+  labs(title='Effects of Engine Displacement on Vehicle Highway MPG', x='Engine displacement (litres)', y='Highway miles per gallon')
+```
+
+<https://www.davidson.edu>
+  
+* Classes
+  + Data Science & Society
+  + Database Programming
+  + Game Development
+  + Thesis I/Capstone
+  
+1. Favorite Shows:
+   1. The Boys  
+   2. The Terror  
+   3. Invincible
+
+Here is a reference[^1]
+
+[^1]: This is the footnote
+
+$$x = \frac{-b \pm \sqrt{b^2- 4ac}}{2a}$$
+```{mermaid}
+flowchart LR
+  A[Road] --> C{Fork}
+  C --> D[Left path]
+  C --> E[Right path]
+```
+
+> Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+:::{.callout-note}
+Im blue.
+:::
+
+:::{.callout-tip}
+Im green.
+:::
+
+:::{.callout-important collapse="true"}
+Im red. Close me.
+:::
+
+{{< pagebreak >}}
+
+## Reflection
+
+1. **Formatting and Structure**: The final project should be neat and readable, which could get difficult given the number of code blocks, figures, and text that we expect to incorporate. However, HTML's built-in formatting options could help improve the flow of our final product. Options like adding a table of contents with `toc:true` (and all TOC options) or making page breaks and adding dividers will let us customize how our final product is laid out.
+2. **Footnotes**: When we finish the final project, I imagine there will be plenty of research backing our datasets, figures, and findings. This research, of course, will constantly be referenced in our writing. Footnotes provide a means of organizing our sources and references in a way more intuitive than in-text citations. Since readers can click-to-follow footnotes, there will be very little confusion on where we got our information for our claims.
+3. **Markdown Documentation**: While this isn't really a method, I think having access to the Markdown documentation itself is incredibly helpful. It can act almost like a utility belt when writing in markdown, providing potential solutions to any given problem and giving instructions on how to implement that solution. I can see us using the Quarto Markdown documentation site throughout the project on a regular basis, both for reminders and new ideas.
